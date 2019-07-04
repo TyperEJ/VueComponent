@@ -49,8 +49,9 @@ export default {
       this.items.splice(index, 1);
     },
     send: function() {
+      let data = new FormData(document.getElementById("form"));
       axios
-        .post("https://96fadfc1.ngrok.io/test", this.form_data)
+        .post("https://96fadfc1.ngrok.io/test", data)
         .then(function(response) {
           console.log(response.data);
         })
@@ -62,10 +63,6 @@ export default {
   computed: {
     pre_name: function() {
       return "pushables[" + this.id + "]";
-    },
-    form_data: function() {
-      let data = new FormData(document.getElementById("form"));
-      return data;
     }
   }
 };
