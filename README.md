@@ -1,2 +1,0 @@
-# VueComponent
-Created with CodeSandbox
